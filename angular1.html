@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular JS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller("myCtrl",function($scope)
+			{
+				$scope.product = product;
+			});
+		var product = 
+		{
+			name : "Bag",
+			price : "2000",
+			description : "Water Proof"
+		}
+	</script>
+</head>
+<body>
+	<div ng-app = "myApp" ng-controller = "myCtrl">
+		<h1>Product Name : {{product.name}}</h1>
+		<p>Product Price : {{product.price}}</p>
+		<p>Product Description : {{product.description}}</p>
+	</div>
+</body>
+</html>
